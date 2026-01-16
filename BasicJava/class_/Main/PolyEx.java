@@ -1,6 +1,7 @@
 package class_.Main;
 
 public class PolyEx {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         Person p;
 
