@@ -10,5 +10,7 @@ public class StringMethodEx {
         String str = br.readLine();
 
         System.out.println(str.substring(0, str.length() - 1));
+
+        System.out.println(String.valueOf('a'));
     }
 }

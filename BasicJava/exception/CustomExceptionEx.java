@@ -16,7 +16,7 @@ public class CustomExceptionEx {
             dataBase.forEach(x -> {
                 if (dataBase.isEmpty() == false) {
                     if (x.getName().equals(member.getName())) {
-                        throw new InsertException("이름이 중복됩니다");
+
                     }
                 }
             });
