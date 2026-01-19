@@ -19,9 +19,9 @@ public class Q1157 {
                 .map(Entry::getKey)
                 .collect(Collectors.toList());
 
-        if (re.size() > 1) {
+        if (re.size() > 1)
             System.out.println("?");
-        } else
+        else
             System.out.println(re.get(0));
 
     }
