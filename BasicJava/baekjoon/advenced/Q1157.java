@@ -21,9 +21,7 @@ public class Q1157 {
 
         if (re.size() > 1) {
             System.out.println("?");
-        }
-
-        else
+        } else
             System.out.println(re.get(0));
 
     }
