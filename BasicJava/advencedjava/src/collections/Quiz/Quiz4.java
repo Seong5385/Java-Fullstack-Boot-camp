@@ -1,4 +1,4 @@
-package collections.Quiz;
+package collections.quiz;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class Quiz4 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         while (true) {
-            System.out.print("입력(I), 검색(S), 삭제(D), 종료(Q): ");
+            System.out.print("\n입력(I), 검색(S), 삭제(D), 종료(Q): ");
             String cm = br.readLine().toUpperCase();
 
             switch (cm) {
@@ -33,7 +33,15 @@ public class Quiz4 {
         System.out.print("\n출력할 데이터의 이름을 입력하세요: ");
         String name = br.readLine();
 
-        db.stream().filter(customer -> customer.getName().equals(name)).forEach(System.out::println);
+        List<Person> result = db.stream().filter(person -> person.getName().equals(name)).toList();
+
+        if (result.isEmpty()) {
+            System.out.printf("%s 회원님의 목록이 없습니다", name);
+        }
+
+        else {
+            result.forEach(System.out::println);
+        }
     }
 
     private static void userDelet(BufferedReader br) throws IOException {
@@ -41,7 +49,15 @@ public class Quiz4 {
         System.out.print("삭제할 데이터의 이름을 입력하세요: ");
         String name = br.readLine();
 
-        db.removeIf(customer -> customer.getName().equals(name));
+        boolean remove = db.removeIf(person -> person.getName().equals(name));
+
+        if (remove) {
+            System.out.println("삭제 성공");
+        }
+
+        else {
+            System.out.println("이름이 존재하지 않습니다");
+        }
     }
 
     private static void userInput(BufferedReader br) throws IOException {
@@ -58,7 +74,7 @@ public class Quiz4 {
                 db.add(user);
 
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+                System.out.println("입력 값이 없습니다.");
                 System.out.println("다시 입력해주세요.\n");
                 continue;
             } finally {
@@ -77,7 +93,7 @@ class Person {
     private int age;
 
     public Person(String name, int age) {
-        if (name.isEmpty()) {
+        if (name.trim().isEmpty()) {
             throw new IllegalArgumentException("\n입력된 이름이 없습니다.");
         } else {
             this.name = name;
@@ -96,6 +112,6 @@ class Person {
 
     @Override
     public String toString() {
-        return "name=" + name + ", age=" + age;
+        return String.format("[" + name + ", " + age + "]" + "\n");
     }
 }

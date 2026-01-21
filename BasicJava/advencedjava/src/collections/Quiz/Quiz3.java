@@ -1,4 +1,4 @@
-package collections.Quiz;
+package collections.quiz;
 
 import java.util.*;
 

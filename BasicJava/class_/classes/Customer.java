@@ -47,7 +47,7 @@ public class Customer implements Rank {
 
     @Override
     public String toString() {
-        return "[이름: " + name + ", 성별: " + gender + ", 이메일: " + email + ", 생년월일: " + birth + "]\n";
+        return "[이름: " + name + ", 성별: " + gender + ", 이메일: " + email + ", 생년월일: " + birth + ", 등급: " + rank + "]\n";
     }
 
 }

@@ -17,7 +17,6 @@ public class CustomerManager {
         while (true) {
             System.out.print("I(입력), D(삭제), U(갱신), P(부분 출력), PA(모두 출력), Q(종료): ");
             String cmd = br.readLine().toUpperCase();
-            System.out.println();
 
             switch (cmd) {
                 case "I" -> insert(br);
@@ -47,7 +46,7 @@ public class CustomerManager {
         System.out.print("출생년도를 입력하세요: ");
         int birth = Integer.parseInt(br.readLine());
 
-        System.out.println("등급을 입력하세요: ");
+        System.out.print("등급을 입력하세요: ");
         String rank = br.readLine();
 
         db.add(new Customer(name, gender, email, birth, rank));
@@ -85,7 +84,7 @@ public class CustomerManager {
                 System.out.print("출생년도를 입력하세요: ");
                 int updateBirth = Integer.parseInt(br.readLine());
 
-                System.out.println("등급을 입력하세요: ");
+                System.out.print("등급을 입력하세요: ");
                 String rank = br.readLine();
 
                 db.get(i).updateData(updateName, updatGender, updateEmail, updateBirth, rank);
@@ -96,10 +95,16 @@ public class CustomerManager {
     }
 
     public static void customerPrint(BufferedReader br) throws IOException {
-        System.out.print("\n출력할 데이터의 이름을 입력하세요: ");
-        String name = br.readLine();
+        while (true) {
+            System.out.print("\n출력할 데이터의 이름을 입력하세요: ");
+            String name = br.readLine();
 
-        db.stream().filter(customer -> customer.getName().equals(name)).forEach(System.out::println);
+            if (!name.isEmpty()) {
+                db.stream().filter(customer -> customer.getName().equals(name)).forEach(System.out::println);
+                break;
+            } else if (name.isEmpty())
+                System.out.println("이름을 입력하세요");
+        }
     }
 
     public static void rankSearch(BufferedReader br) throws IOException {
@@ -110,6 +115,8 @@ public class CustomerManager {
         if (db.isEmpty())
             System.out.println("\n출력할 데이터가 없습니다 입력 먼저 해주십시오\n");
 
-        db.forEach(m -> System.out.println(m));
+        else
+            db.forEach(System.out::println);
     }
+
 }
