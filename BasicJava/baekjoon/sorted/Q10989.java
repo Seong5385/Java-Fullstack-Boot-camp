@@ -6,13 +6,15 @@ import java.util.*;
 public class Q10989 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        List<Integer> num = new ArrayList<>();
+        int[] num = new int[n];
 
-        for (int i = 0; i < n; i++) {
-            num.add(Integer.parseInt(br.readLine()));
+        for (int i = 0; i < num.length; i++) {
+            num[i] = Integer.parseInt(br.readLine());
         }
 
-        num.stream().sorted().forEach(System.out::println);
+        Arrays.stream(num).sorted().forEach(x -> sb.append(x).append("\n"));
+        System.out.println(sb);
     }
 }

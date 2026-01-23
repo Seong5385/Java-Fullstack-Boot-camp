@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Company",
+            "request": "launch",
+            "mainClass": "collections.quiz.Company",
+            "projectName": "Java-Fullstack-Boot-camp_2986e548"
+        },
+        {
+            "type": "java",
             "name": "Q2750",
             "request": "launch",
             "mainClass": "baekjoon.sorted.Q2750",

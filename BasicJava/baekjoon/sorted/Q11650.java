@@ -6,26 +6,21 @@ import java.util.*;
 public class Q11650 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuffer sb = new StringBuffer();
 
         int n = Integer.parseInt(br.readLine());
+        int[][] numbers = new int[n][2];
 
-        List<Integer> x = new ArrayList<>();
-        List<Integer> y = new ArrayList<>();
-
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-
-            x.add(Integer.parseInt(st.nextToken()));
-            y.add(Integer.parseInt(st.nextToken()));
+            numbers[i][0] = Integer.parseInt(st.nextToken());
+            numbers[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        Collections.sort(x);
-        Collections.sort(y);
+        Arrays.stream(numbers).sorted((a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0])
+                .forEach(arr -> sb.append(arr[0]).append(" ").append(arr[1]).append("\n"));
 
-        System.out.println();
+        System.out.println(sb);
 
-        for (int i = 0; i < n; i++) {
-            System.out.println(new StringBuilder().append(x.get(i)).append(" ").append(y.get(i)));
-        }
     }
 }
