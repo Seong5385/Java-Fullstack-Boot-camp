@@ -16,6 +16,7 @@ public class WrapperExample2 {
                         (int) ((a + b + c) * 100) / 100.0);
 
             int d = Integer.valueOf(s1);
+            @SuppressWarnings("removal")
             int e = new Integer(s1).intValue();
             System.out.println(d + e);
       }

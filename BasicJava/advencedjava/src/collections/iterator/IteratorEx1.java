@@ -6,6 +6,7 @@ import java.util.Set;
 
 public class IteratorEx1 {
 
+   @SuppressWarnings("removal")
    public static void main(String[] args) {
 
       Set<Object> set = new HashSet<>();
