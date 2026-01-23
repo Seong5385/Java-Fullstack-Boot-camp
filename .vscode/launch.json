@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LambdaEx10",
+            "request": "launch",
+            "mainClass": "chapter15.LambdaEx10",
+            "projectName": "test"
+        },
+        {
+            "type": "java",
             "name": "Company",
             "request": "launch",
             "mainClass": "collections.quiz.Company",
