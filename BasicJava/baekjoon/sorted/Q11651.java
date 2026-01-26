@@ -17,5 +17,10 @@ public class Q11651 {
             numbers[i][1] = Integer.parseInt(st.nextToken());
         }
 
+        Arrays.stream(numbers).sorted((a, b) -> a[1] == b[1] ? a[0] - b[0] : a[1] - b[1])
+                .forEach(arr -> sb.append(arr[0]).append(" ").append(arr[1]).append("\n"));
+
+        System.out.println(sb);
+
     }
 }

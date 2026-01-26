@@ -21,7 +21,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("상품명: " + name + " | " + "가격: " + price);
+        return String.format("상품명: " + name + " | " + "가격: %,d", price);
     }
 }
 
