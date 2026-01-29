@@ -25,7 +25,7 @@ public class Product {
     }
 }
 
-class Main {
+class ProductMain {
     public static void main(String[] args) {
         List<Product> products = new ArrayList<>();
 
