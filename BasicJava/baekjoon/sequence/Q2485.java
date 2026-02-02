@@ -9,5 +9,9 @@ public class Q2485 {
 
         int n = Integer.parseInt(br.readLine());
 
+        for (int i = 0; i < n; i++) {
+
+        }
+
     }
 }
