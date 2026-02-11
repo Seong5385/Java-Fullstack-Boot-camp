@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "jdbcJava/lib/mysql-connector-j-9.6.0.jar",
+        "c:\\Users\\tjoeun\\Downloads\\lombok-1.18.42.jar",
+        "c:\\Users\\tjoeun\\Downloads\\ojdbc11-23.26.1.0.0.jar",
+        "c:\\Users\\tjoeun\\Downloads\\mariadb-java-client-3.5.7.jar"
+    ]
+}

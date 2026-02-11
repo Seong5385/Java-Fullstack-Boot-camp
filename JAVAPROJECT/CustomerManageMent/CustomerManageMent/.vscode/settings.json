@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\tjoeun\\Downloads\\lombok-1.18.42.jar",
+        "c:\\Users\\tjoeun\\Downloads\\mysql-connector-j-9.6.0.jar"
+    ]
+}
