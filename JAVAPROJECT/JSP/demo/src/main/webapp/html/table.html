@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 테이블</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .resume {
+            width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ccc;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        td,
+        th {
+            border: 1px solid #ccc;
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        th {
+            background: #f0f0f0;
+            width: 120px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 95%;
+            padding: 6px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        .photo {
+            width: 120px;
+            height: 150px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .btns {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btns input {
+            padding: 10px 30px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <caption>1. 학생 테이블</caption><br><br>
+    <table border="1">
+        <thead>
+            <td>학번</td>
+            <td>이름</td>
+            <td>학과</td>
+            <td>이메일</td>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>202601</th>
+                <th>홍길동</th>
+                <th>체육학과</th>
+                <th>hong@naver.com</th>
+            </tr>
+
+            <tr>
+                <th>202602</th>
+                <th>이순신</th>
+                <th>해양학과</th>
+                <th>lee@naver.com</th>
+            </tr>
+
+            <tr>
+                <th>202603</th>
+                <th>강감찬</th>
+                <th>정치외교</th>
+                <th>kang@naver.com</th>
+            </tr>
+
+            <tr>
+                <th>202604</th>
+                <th>유관순</th>
+                <th>유아교육</th>
+                <th>yougs@naver.com</th>
+            </tr>
+
+            <tr>
+                <th>202605</th>
+                <th>정약용</th>
+                <th>물리화학</th>
+                <th>jungyy@naver.com</th>
+            </tr>
+
+            <tr>
+                <th>202606</th>
+                <th>유성룡</th>
+                <th>행정학</th>
+                <th>ryusy@naver.com</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <form method="GET">
+        <table border="1">
+            <tr>
+                <td rowspan="3" width="100" height="100">사진</td>
+                <td rowspan="2">이름</td>
+                <td colspan="2" rowspan="2">
+                    <input type="text" name="name" size="10" placeholder="이름">
+                </td>
+                <td>생년월일</td>
+                <td>
+                    <input type="text" name="birth" size="10" placeholder="YYYY-MM-DD">
+                </td>
+            </tr>
+
+            <tr>
+                <td>휴대폰</td>
+                <td>
+                    <input type="text" name="phone" size="10" placeholder="010-0000-0000">
+                </td>
+            </tr>
+
+            <tr>
+                <td>현주소</td>
+                <td colspan="2">
+                    <input type="text" name="address" size="10" placeholder="주소">
+                </td>
+                <td>이메일</td>
+                <td>
+                    <input type="text" name="email" size="10" placeholder="example@naver.com">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6" height="50">
+                    좋아하는 교과목: JAVA, DATABASE, HTML/CSS, SPRING, REACT/NEXT.JS
+                    <br>
+                    <input type="text" name="subject" size="68" placeholder="예) JAVA, SPRING">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    학력사항 (졸업일/학교명/전공/졸업여부/소재지/성적)
+                    <br>
+                    <input type="text" name="education" size="68" placeholder="예) 2026-02 / OO대 / 컴공 / 졸업 / 서울 / 4.0">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    경력사항
+                    <br>
+                    <input type="text" name="career" size="68" placeholder="예) 2025~2026 / OO회사 / 인턴">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    자기 소개
+                    <br>
+                    <input type="text" name="intro" size="68" placeholder="간단 소개">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    취미
+                    <br>
+                    <input type="text" name="hobby" size="68" placeholder="예) 운동, 독서">
+                </td>
+            </tr>
+        </table>
+
+        <input type="submit" value="가입">
+        <input type="reset" value="취소">
+    </form>
+
+    <br>
+
+
+
+    <h2>이력서</h2>
+
+    <!-- 기본정보 -->
+    <table>
+        <tr>
+            <th rowspan="4">사진</th>
+            <td rowspan="4" style="width:140px;">
+                <div class="photo">사진</div>
+            </td>
+            <th>이름</th>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <th>생년월일</th>
+            <td><input type="text" name="birth" placeholder="YYYY-MM-DD"></td>
+        </tr>
+        <tr>
+            <th>휴대폰</th>
+            <td><input type="text" name="phone"></td>
+        </tr>
+        <tr>
+            <th>이메일</th>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3"><input type="text" name="address"></td>
+        </tr>
+    </table>
+
+    <!-- 학력 -->
+    <h2>학력사항</h2>
+    <table>
+        <tr>
+            <th>기간</th>
+            <th>학교명</th>
+            <th>전공</th>
+            <th>졸업여부</th>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+
+    <!-- 경력 -->
+    <h2>경력사항</h2>
+    <table>
+        <tr>
+            <th>기간</th>
+            <th>회사명</th>
+            <th>직무</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+
+    <!-- 기술 -->
+    <h2>보유기술</h2>
+    <table>
+        <tr>
+            <td>
+                <input type="checkbox"> JAVA
+                <input type="checkbox"> DATABASE
+                <input type="checkbox"> HTML/CSS
+                <input type="checkbox"> SPRING
+                <input type="checkbox"> REACT / NEXT.JS
+            </td>
+        </tr>
+    </table>
+
+    <!-- 자기소개 -->
+    <h2>자기소개</h2>
+    <textarea name="intro"></textarea>
+
+    <!-- 취미 -->
+    <h2>취미</h2>
+    <input type="text" name="hobby">
+
+    <div class="btns">
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+    </div>
+
+    </div>
+    </form>
+</body>
+
+</html>

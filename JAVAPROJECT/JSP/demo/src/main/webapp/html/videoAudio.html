@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Media</title>
+</head>
+
+<body>
+    <h1>Video 태그</h1>
+    <hr>
+    <video width="320" height="240" autoplay muted>
+        <source src="./videos/mov_bbb.mp4" type="video/mp4">
+    </video>
+
+    <video width="220" height="220" controls>
+        <source src="./videos/movie.mp4" type="video/mp4">
+    </video>
+
+    <hr>
+    <h1>Audio 태그</h1>
+    <audio controls>
+        <source src="./audio/horse.mp3" type="audio/mpeg">
+        <source src="./audio/horse.ogv" type="audio/ogg">
+    </audio>
+
+    <hr>
+    <h1>plug-ins </h1>
+    <object width="100%" height="100%" data="./videos/mov_bbb.mp4"></object>
+
+    <hr>
+    <h1> Youtube영상</h1>
+    <iframe width="700" height="394" src="https://www.youtube.com/embed/0HF4ngbxjFU" title="이 맛에 택시기사 하지 ㅋㅋ"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+
+</html>
