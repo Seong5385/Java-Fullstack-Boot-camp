@@ -8,5 +8,6 @@
         "c:\\Users\\tjoeun\\Downloads\\lombok-1.18.42.jar",
         "c:\\Users\\tjoeun\\Downloads\\mysql-connector-j-9.6.0.jar"
     ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "liveServer.settings.port": 5501
 }

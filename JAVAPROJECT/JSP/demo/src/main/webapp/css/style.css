@@ -1,0 +1,47 @@
+table {
+    border-collapse: collapse;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    width: 80%;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(90, 90, 201);
+}
+
+tr {
+    height: 24px;
+    font-size: 14px;
+}
+
+
+
+tr:hover {
+    height: 25px;
+    font-size: 14px;
+    background-color: #80d115;
+    color: white;
+    cursor: grab;
+}
+
+#name {
+    width: 15%;
+}
+
+#gender {
+    width: 10%;
+}
+
+#addr {
+    width: 25%;
+}
+
+#age {
+    width: 50%;
+}
+
+.odd {
+    background-color: rgb(231, 166, 166);
+}

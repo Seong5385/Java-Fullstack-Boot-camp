@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .box3 {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+    <div class="box4">BOX4</div>
+    <button class="btn2">박스2 컨트롤 </button>
+    <button class="btn3">박스3 보이기 </button>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $("button.btn2").click(function () {
+        $(".box2").toggle()
+    });
+    $("button.btn3").click(function () {
+        if ($(".box3").css("visibility") != "visible")
+            $(".box3").css("visibility", "visible");
+
+        else
+            $(".box3").css("visibility", "hidden");
+    });
+</script>
+
+</html>
